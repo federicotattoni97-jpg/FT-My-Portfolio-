@@ -2,7 +2,7 @@
 const images = [
     "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790399/photo_1_s1rt3j.jpg",
     "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790417/photo_2_qqvekx.jpg",
-    "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790425/photo_3_sdbwrt.jpg",
+    "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763883869/photo_3_tzgzoc.jpg",
     "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790435/photo_4_loaodr.jpg",
     "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790429/photo_5_yevx9y.jpg",
     "https://res.cloudinary.com/dosqmq1bf/image/upload/v1763790430/photo_6_ukixyg.jpg",
@@ -74,3 +74,4 @@ if (lightbox) {
         if (e.target === lightbox) lightbox.style.display = "none";
     });
 }
+
