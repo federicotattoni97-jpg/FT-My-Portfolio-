@@ -1,4 +1,4 @@
-/* ===== GENERALE ===== */
+/* ====================== GENERALE ====================== */
 body, html {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body, html {
     text-align: center;
 }
 
-/* ===== HERO / PHOTO_1 ===== */
+/* ====================== HERO / PHOTO_1 ====================== */
 .hero {
     position: relative;
     height: 80vh;
@@ -25,11 +25,11 @@ body, html {
 }
 
 .hero h1 {
-	font-family: 'Georgia', serif;  /* font elegante */
+    font-family: 'Georgia', serif;
     font-size: 4rem;
     margin: 0;
-	letter-spacing: 4px;
-	opacity: 100;
+    letter-spacing: 4px;
+    opacity: 100;
     transform: translateY(-20px);
     animation: fadeInDown 1s forwards;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
@@ -37,15 +37,15 @@ body, html {
 }
 
 .hero p {
-	font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif;
     font-size: 1.2rem;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* ===== SEZIONI ===== */
+/* ====================== SEZIONI ====================== */
 .section-title {
-	font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif;
     font-size: 2rem;
     margin: 2rem 0 1rem 0;
     text-transform: uppercase;
@@ -54,15 +54,15 @@ body, html {
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
-/* ===== ABOUT ===== */
+/* ====================== ABOUT ====================== */
 .about {
-	font-family: 'Georgia', serif;
+    font-family: 'Georgia', serif;
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* ===== CAROUSEL ===== */
+/* ====================== CAROUSEL ====================== */
 .carousel-section {
     padding: 2rem 0;
 }
@@ -73,10 +73,17 @@ body, html {
     justify-content: center;
     overflow-x: auto;
     padding: 1rem 0;
+
+    /* Nasconde la barra di scorrimento */
+    scrollbar-width: none;      /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {  /* Chrome, Safari */
+    display: none;
 }
 
 .carousel img {
-    height: 280px; /* leggermente più grandi */
+    height: 280px;
     width: auto;
     border-radius: 5px;
     object-fit: cover;
@@ -85,12 +92,18 @@ body, html {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Centra le ultime 2 foto */
+.carousel img:nth-last-child(-n+2) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .carousel img:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 24px rgba(0,0,0,0.7);
 }
 
-/* ===== GALLERY ===== */
+/* ====================== GALLERY ====================== */
 .gallery-section {
     padding: 2rem 0;
 }
@@ -118,7 +131,7 @@ body, html {
     box-shadow: 0 12px 24px rgba(0,0,0,0.7);
 }
 
-/* ===== LIGHTBOX ===== */
+/* ====================== LIGHTBOX ====================== */
 .lightbox {
     display: none;
     position: fixed;
