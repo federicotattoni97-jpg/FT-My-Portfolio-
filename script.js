@@ -27,16 +27,41 @@ const images = [
 ];
 
 // CAROUSEL (prime 6 foto)
+// ================== CAROUSEL INFINITO ==================
 const carousel = document.getElementById("carousel");
+
 if (carousel) {
-    images.slice(0, 6).forEach(url => {
+
+    // 1) Carichiamo le prime 6 immagini
+    const firstBatch = images.slice(0, 6);
+    firstBatch.forEach(url => {
         const img = document.createElement("img");
         img.loading = "lazy";
         img.src = url;
         img.alt = "Highlight photo";
         carousel.appendChild(img);
     });
+
+    // 2) Duplichiamo lo stesso blocco per creare un loop
+    firstBatch.forEach(url => {
+        const img = document.createElement("img");
+        img.loading = "lazy";
+        img.src = url;
+        img.alt = "Highlight photo duplicate";
+        carousel.appendChild(img);
+    });
+
+    // 3) Effetto loop infinito
+    carousel.addEventListener("scroll", () => {
+        const maxScroll = carousel.scrollWidth / 2;
+        
+        // Quando arrivi oltre metà, torni all'inizio
+        if (carousel.scrollLeft >= maxScroll) {
+            carousel.scrollLeft = 0;
+        }
+    });
 }
+
 
 // GALLERY (foto dalla 7 in poi)
 const gallery = document.getElementById("gallery");
@@ -74,4 +99,5 @@ if (lightbox) {
         if (e.target === lightbox) lightbox.style.display = "none";
     });
 }
+
 
